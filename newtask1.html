@@ -1,0 +1,56 @@
+<html>
+<head>
+
+<style>
+div {
+        margin-bottom: 10px;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+      }
+</style>
+<script>
+
+
+function enroll()
+{
+alert("wants to register???");
+var n=document.getElementById("nb1").value;
+var a=document.getElementById("ad1").value;
+var dob=document.getElementById("d1").value;
+var em=document.getElementById("e1").value;
+var mob=document.getElementById("mb1").value;
+var mydata={name:n,address:a, date:dob,email:em, mblno:mob};
+var details=Object.values(mydata);
+document.getElementById("bp").innerHTML=details;
+
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="task1.css"
+
+</head>
+
+<body>
+
+<h1 style="background-color:red;"><marquee>Student Registration</marquee></h1>
+<div>
+<label>id:</label><input type="text" name="id"align="right"><br><br>
+</div>
+Name:<input type="text" name="Name"><br><br>
+
+UserName:<input type="text" name="uname"><br><br>
+Passwor:<input type="password" name="pass"><br><br>
+
+<h2 style="background-color:green;font-size:300%;font-style:italic;text-align:center;">Enter your details</h2>
+Name:<input type="text" name="name"id="nb1"><br><br>
+Address:<input type="text"name="address"id="ad1"><br><br>
+dateofBirth:<input type="date"id="d1"><br><br>
+Email:<input type="email"id="e1">
+mobno:<input type="number"id="mb1"><br><br>
+<button id="r1" onclick="enroll()">register</button>
+<p id="bp"></p>
+</body>
+</html>
